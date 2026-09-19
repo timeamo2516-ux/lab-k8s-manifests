@@ -1,9 +1,11 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: app-config
-  namespace: lab-app
+  name: tech-store-config
+  namespace: tech-store
 data:
-  DB_HOST: "database"
+  DB_HOST: postgres
   DB_PORT: "5432"
-  # Puedes agregar aquí configuraciones globales que no sean sensibles
+  DB_NAME: techstore
+  DB_URL: jdbc:postgresql://postgres:5432/techstore
+  INVENTORY_URL: http://inventory-service:8081

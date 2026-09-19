@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sales-service
+  namespace: tech-store
+spec:
+  type: ClusterIP
+  selector:
+    app: sales-service
+  ports:
+    - name: http
+      port: 8082
+      targetPort: http
